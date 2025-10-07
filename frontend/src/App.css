@@ -1,42 +1,141 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Header styles with a fresh, minimalist touch */
+header {
+                                   /* red      orange   yellow   green    blue     purple  */
+  background: linear-gradient(135deg, #f4b6b6, #f7cfa4, #f9e6a6, #bde3ae, #a2baff, #d09fdd);
+  color: white;
+  padding: 10px 0;
   text-align: center;
+  border-radius: 8px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  text-shadow: white -1px -1px;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #aaa;
+}
+
+/* Section titles with a bold, unique font */
+h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+/* Paragraphs with a lighter feel */
+p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Stylized main content area */
+main {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1; /* take all available vertical space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* center content horizontally */
+}
+
+/* Button-like links for modern feel */
+button {
+  background: #a2baff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #87a4fa;
+}
+
+.button.on {
+    background: #bde3ae;
+}
+
+.button.on:hover {
+    background-color: #a7e090;
+}
+
+/* Minimalist card layout for content */
 .card {
-  padding: 2em;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Prevent body container from resizing when clicking links */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%; /* Make sure the width is always full */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .App {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
 }
