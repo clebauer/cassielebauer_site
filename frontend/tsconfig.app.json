@@ -22,7 +22,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* 🔹 Add these for path aliases */
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "pages/*": ["src/pages/*"]
+    }
   },
   "include": ["src"]
 }
