@@ -1,12 +1,7 @@
-// No need to import React with "react-jsx"
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-// Define props type
-type HeaderProps = {
-  routes: { path: string; name: string }[];
-};
-
-function Header({ routes }: HeaderProps) {
+function Header({ routes }) {
   return (
     <header className="navbar">
       <nav>
@@ -19,7 +14,7 @@ function Header({ routes }: HeaderProps) {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
