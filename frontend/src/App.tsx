@@ -1,26 +1,33 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from 'components/layout/Header'
-import Home from 'pages/Home'
-import './App.css'
+import Header from 'components/layout/Header';
+import Home from 'pages/Home';
 
-const routes = [
-  { path: '/', component: <Home />, name: 'Home' },
-]
+// Define route type
+type RouteType = {
+  path: string;
+  component: JSX.Element;
+  name: string;
+};
+
+const routes: RouteType[] = [
+  { path: '/', component: <Home status="initial" />, name: 'Home' },
+];
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <Router>
       <Header routes={routes} />
-      <main>
-        <Routes>
-          {routes.map(({ path, component }) => (
-            <Route key={path} path={path} element={component} />
-          ))}
-        </Routes>
-      </main>
+      <Routes>
+        {routes.map(({ path, component }) => (
+          <Route key={path} path={path} element={component} />
+        ))}
+      </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
