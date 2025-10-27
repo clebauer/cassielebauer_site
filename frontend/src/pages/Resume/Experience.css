@@ -1,0 +1,20 @@
+.company-group {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: #fafafa;
+  transition: box-shadow 0.2s ease;
+}
+
+.company-group:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.company-name {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}

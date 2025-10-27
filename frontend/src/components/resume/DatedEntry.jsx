@@ -8,8 +8,8 @@ export default function DatedEntry({ qualifier, location, context, startDate, en
   return (
     <div
       className="dated-entry"
-      onMouseEnter={() => setHoveredSkills(skills)}
-      onMouseLeave={() => setHoveredSkills([])}
+      onMouseEnter={() => skills?.length && setHoveredSkills(skills)}
+        onMouseLeave={() => setHoveredSkills([])}
     >
       <p><strong>{qualifier}</strong> — {location}</p>
       <p>{context} · {startDate} – {endDate}</p>
