@@ -1,0 +1,27 @@
+.link-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.link-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+    margin: 6px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: ;
+    border-radius: 6px;
+    border: 2px solid #666;
+}
+
+.link-badge:hover{
+    background-color: #e0e0e0;
+    border: 2px solid #bbb;
+    transform: translateY(1px);
+}

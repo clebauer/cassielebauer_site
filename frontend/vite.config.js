@@ -6,9 +6,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-//       'resume-components': '/src/components/resume',
       'pages': '/src/pages',
+      'context': '/src/context',
       'components': '/src/components',
+      'assets': '/src/assets',
+      'data': '/src/data',
 //       'common-components': '/src/components/common',
 //       'styles':'/src/styles'
     },

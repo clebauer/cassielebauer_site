@@ -1,0 +1,30 @@
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+  grid-auto-rows: 80px; /* row height; adjust to taste */
+  gap: 12px;
+  padding: 24px;
+  background-color: #fafafa;
+  font-size: 16px;
+}
+
+/* Example positioning for each block */
+.projects {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 4;
+}
+
+.education {
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 4;
+}
+
+.experience {
+  grid-column: 5 / span 5;
+  grid-row: 1 / span 6;
+}
+
+.skills {
+  grid-column: 10 / span 3;
+  grid-row: 1 / span 6;
+}
