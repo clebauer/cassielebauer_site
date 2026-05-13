@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from 'components/Header'
 import Home from 'pages/Home'
 import Resume from 'pages/Resume/index'
+import Sidebar from 'components/layout/Sidebar'
+
 import './App.css'
 
 const routes = [
@@ -21,6 +23,7 @@ function App() {
           ))}
         </Routes>
       </main>
+        <Sidebar />
     </Router>
   )
 }

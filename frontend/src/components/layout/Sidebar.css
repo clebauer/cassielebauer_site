@@ -1,0 +1,68 @@
+.sidebar {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-link {
+  position: relative;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #222;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+
+  /* IMPORTANT: creates stacking context */
+  isolation: isolate;
+}
+
+/* gradient layer */
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  z-index: 0;
+}
+
+/* text above layer */
+.sidebar-link {
+  z-index: 1;
+}
+
+/* hover reveal */
+.sidebar-link:hover::before {
+  opacity: 0.25;
+}
+
+/* IMPORTANT FIX: proper indexing via attribute selector */
+.sidebar-link:nth-child(1)::before { background: var(--color-1); }
+.sidebar-link:nth-child(2)::before { background: var(--color-2); }
+.sidebar-link:nth-child(3)::before { background: var(--color-3); }
+.sidebar-link:nth-child(4)::before { background: var(--color-4); }
+.sidebar-link:nth-child(5)::before { background: var(--color-5); }
+.sidebar-link:nth-child(6)::before { background: var(--color-6); }
+.sidebar-link:nth-child(7)::before { background: var(--color-7); }
+.sidebar-link:nth-child(8)::before { background: var(--color-8); }
+.sidebar-link:nth-child(9)::before { background: var(--color-9); }
+.sidebar-link:nth-child(10)::before { background: var(--color-10); }
+.sidebar-link:nth-child(11)::before { background: var(--color-11); }
+.sidebar-link:nth-child(12)::before { background: var(--color-12); }
