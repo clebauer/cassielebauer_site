@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Header from 'components/Header'
-import Home from 'pages/Home'
-import Resume from 'pages/Resume/index'
+import Header from 'components/layout/Header'
 import Sidebar from 'components/layout/Sidebar'
+
+import Home from 'pages/home/Home'
+import Resume from 'pages/resume/index'
 
 import './App.css'
 
@@ -16,14 +17,17 @@ function App() {
   return (
     <Router>
       <Header routes={routes} />
-      <main>
-        <Routes>
-          {routes.map(({ path, component }) => (
-            <Route key={path} path={path} element={component} />
-          ))}
-        </Routes>
-      </main>
+
+      <div className="app-layout">
         <Sidebar />
+          <main className="app-main">
+            <Routes>
+              {routes.map(({ path, component }) => (
+                <Route key={path} path={path} element={component} />
+              ))}
+            </Routes>
+          </main>
+      </div>
     </Router>
   )
 }
