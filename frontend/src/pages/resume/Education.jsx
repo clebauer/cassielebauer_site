@@ -1,7 +1,7 @@
 import React from "react";
-import ResumeSection from "components/resume/ResumeSection";
-import DatedEntry from "components/resume/DatedEntry"
-import { education } from "data/education";
+import ResumeSection from "features/resume/components/ResumeSection";
+import DatedEntry from "features/resume/components/DatedEntry"
+import { education } from "features/resume/data/education";
 
 export default function Education() {
   return (

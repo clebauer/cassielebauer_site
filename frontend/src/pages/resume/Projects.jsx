@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeSection from "components/resume/ResumeSection";
+import ResumeSection from "features/resume/components/ResumeSection";
 
 export default function Projects() {
   return (

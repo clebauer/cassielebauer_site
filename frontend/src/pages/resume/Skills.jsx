@@ -1,6 +1,6 @@
 import React from "react";
-import ResumeSection from "components/resume/ResumeSection";
-import SkillEntry from "components/resume/SkillEntry"
+import ResumeSection from "features/resume/components/ResumeSection";
+import SkillEntry from "features/resume/components/SkillEntry"
 
 export default function Skills() {
   return (
