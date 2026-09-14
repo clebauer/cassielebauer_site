@@ -1,21 +1,26 @@
 /* Header styles with a fresh, minimalist touch */
 header {
-                                   /* red      orange   yellow   green    blue     purple  */
-  background: linear-gradient(135deg, #f4b6b6, #f7cfa4, #f9e6a6, #bde3ae, #a2baff, #d09fdd);
-  color: white;
-  padding: 10px 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-1), var(--color-2), var(--color-3),
+    var(--color-4), var(--color-5), var(--color-6)
+  );
+  color: var(--white);
+  padding: var(--space-10) 0;
   text-align: center;
-  border-radius: 8px;
-  border: solid #666;
-  border-width: 0px 0px 2px 0px;
+  border-radius: var(--radius-lg);
+  border: solid var(--gray-dark);
+  border-width: 0 0 var(--border-thick) 0;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
 }
-
 
 nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: var(--space-30);
   padding: 0;
   margin: 0;
 }
@@ -25,133 +30,112 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 1.2rem;
+  font-size: var(--font-size-lg);
   font-weight: 500;
-  color: black;
+  color: var(--text);
   text-decoration: none;
-  text-shadow: white -1px -1px;
-  transition: color 0.3s ease;
+  text-shadow: var(--white) -1px -1px;
+  transition: color var(--transition-slow);
 }
 
 nav ul li a:hover {
-  color: #aaa;
+  color: var(--gray-mid);
 }
 
-/* Section titles with a bold, unique font */
 h1 {
-  font-size: 2rem;
+  font-size: var(--font-size-h1);
   font-weight: 600;
-  color: black;
-  text-decoration: none;
-  text-shadow: white -1px -1px;
-  /*margin-bottom: 10px;*/
+  color: var(--text);
+  text-shadow: var(--white) -1px -1px;
   letter-spacing: 1px;
-  transition: color 0.3s ease;
+  transition: color var(--transition-slow);
   text-align: center;
 }
 
 h2 {
-    font-size: 1.2rem;
+  font-size: var(--font-size-lg);
 }
 
-/* Stylized main content area */
-main {
-  background-color: #fafafa;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  /* text-align: center; */
-  flex: 1; /* take all available vertical space */
-  display: block;
-  flex-direction: column;
-  align-items: center;     /* center content horizontally */
-}
-
-/* Button-like links for modern feel */
 button {
-  background: #a2baff;
-  color: #fff;
-  padding: 12px 25px;
+  background: var(--color-5);
+  color: var(--white);
+  padding: var(--space-12) var(--space-25);
   border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-md);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-slow);
 }
 
 button:hover {
-  background-color: #87a4fa;
+  background-color: var(--button-hover);
 }
 
 .button.on {
-    background: #bde3ae;
+  background: var(--color-4);
 }
 
 .button.on:hover {
-    background-color: #a7e090;
+  background-color: var(--button-on-hover);
 }
 
-/* Minimalist card layout for content */
 .card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  transition: transform 0.3s ease-in-out;
+  background: var(--white);
+  padding: var(--space-25);
+  border-radius: var(--radius-xxl);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--space-20);
+  transition: transform var(--transition-slow-inout);
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* Prevent body container from resizing when clicking links */
-html, body {
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  width: 100%; /* Make sure the width is always full */
-}
-
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: var(--space-10);
   }
 
   nav ul {
     flex-direction: column;
-    gap: 15px;
+    gap: var(--space-15);
   }
 
   .App {
-    padding: 25px 15px;
+    padding: var(--space-25) var(--space-15);
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-h1-mobile);
   }
 
   p {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
   }
 
   button {
-    padding: 10px 20px;
+    padding: var(--space-10) var(--space-20);
   }
 }
 
 /* App organization */
 .app-layout {
   display: flex;
-  min-height: calc(100vh - 60px); /* adjust if header height differs */
+  gap: var(--space-15);
+  margin-top: var(--space-15);
+  min-height: calc(85vh); /* adjust if header height differs */
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-
-/* Main content area */
 .app-main {
   flex: 1;
-  padding: 20px;
-  background-color: #fafafa;
-  border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  padding: var(--space-20);
+  background-color: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
   overflow-x: hidden;
 }

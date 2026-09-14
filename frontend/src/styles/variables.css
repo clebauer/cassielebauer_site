@@ -1,8 +1,62 @@
 :root {
-    /* spacing */
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 32px;
+  /* ---------- spacing scale ---------- */
+  /* use these first if a value fits the scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* ---------- spacing: one-off values ---------- */
+  /* named for where they show up, since they don't fit the 4/8/16/24/32 scale.
+     safe to retarget any of these onto the scale above later if you want to
+     tighten things up visually. */
+  --space-5: 5px;    /* DatedEntry vertical padding */
+  --space-6: 6px;    /* LinkBadge gap / margin */
+  --space-10: 10px;  /* header y-padding, sidebar/main margin */
+  --space-12: 12px;  /* button y-padding, LinkBadge x-padding, grid gap */
+  --space-15: 15px;  /* mobile nav gap */
+  --space-20: 20px;  /* sidebar + main padding (kept equal on purpose — see note below) */
+  --space-25: 25px;  /* button x-padding, card padding */
+  --space-30: 30px;  /* nav link gap */
+  --row-height: 80px; /* resume grid row height */
+
+  /* rem-based (kept in rem since they're type-relative, not layout-relative) */
+  --space-skill-y: 0.25rem;
+  --space-skill-x: 0.75rem;
+
+  /* ---------- widths ---------- */
+  --sidebar-width: 150px;
+  --content-max-width: 1100px;
+
+  /* ---------- radii ---------- */
+  --radius-sm: 5px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-xxl: 12px;
+  --radius-pill: 9999px;
+
+  /* ---------- borders ---------- */
+  --border-thin: 1px;
+  --border-thick: 2px;
+
+  /* ---------- shadows ---------- */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 6px 10px rgba(0, 0, 0, 0.1);
+
+  /* ---------- typography ---------- */
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 1.1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-h1: 2rem;
+  --font-size-h1-mobile: 2.5rem;
+
+  /* ---------- transitions ---------- */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --transition-slow-inout: 0.3s ease-in-out;
 }

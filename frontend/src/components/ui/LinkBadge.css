@@ -1,27 +1,26 @@
 .link-logo {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  width: var(--space-lg);
+  height: var(--space-lg);
+  object-fit: contain;
 }
 
 .link-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 6px 12px;
-    margin: 6px;
-    background-color: #f0f0f0;
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: ;
-    border-radius: 6px;
-    border: 2px solid #666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-12);
+  margin: var(--space-6);
+  background-color: var(--border-light);
+  color: var(--text-heading);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: var(--border-thick) solid var(--gray-dark);
 }
 
-.link-badge:hover{
-    background-color: #e0e0e0;
-    border: 2px solid #bbb;
-    transform: translateY(1px);
+.link-badge:hover {
+  background-color: var(--gray-hover);
+  border: var(--border-thick) solid var(--gray-hover-border);
+  transform: translateY(1px);
 }

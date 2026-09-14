@@ -1,20 +1,20 @@
 .section {
-    border-radius: 6px;
-    background: white;
-    font-size: 14px;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  font-size: var(--font-size-sm);
 }
 
 .section-label {
-    font-size: 16px;
-    text-align: center;
-    background-color: #666;
-    color: white;
-    border-radius: 6px;
+  font-size: var(--font-size-base);
+  text-align: center;
+  background-color: var(--gray-dark);
+  color: var(--white);
+  border-radius: var(--radius-md);
 }
 
 .section-content {
   padding-left: 0;
-  margin: 20px;
+  margin: var(--space-20);
 }
 
 .section-content ul {
@@ -24,5 +24,5 @@
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem; /* space between tags */
+  gap: var(--space-sm); /* space between tags */
 }

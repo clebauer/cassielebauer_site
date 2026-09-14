@@ -1,3 +1,6 @@
+@import './styles/colors.css';
+@import './styles/variables.css';
+
 /* Global reset and styling */
 * {
   margin: 0;
@@ -8,11 +11,9 @@
 
 /* Ensure the page takes up the full height and width */
 html, body {
-  height: 100%; /* Ensures body takes the full viewport height */
-  margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Default font */
-  background-color: #f4f4f4; /* Background color for the page */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* Make sure root div for React takes up the full height and width */
@@ -23,16 +24,16 @@ html, body {
   width: 100%; /* Ensures the app spans the full width */
 }
 
-/* General body styling */
 body {
   font-family: 'Merriweather', sans-serif;
-  background-color: #f5f5f5; /* Light gray background */
-  color: #2c2c2c; /* Darker text for contrast */
+  background-color: var(--page-bg);
+  color: var(--text-heading);   /* was hardcoded #2c2c2c */
   line-height: 1.6;
   min-height: 100vh;
-  padding: 20px;
+  padding: var(--space-20);     /* was hardcoded 20px */
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
 }

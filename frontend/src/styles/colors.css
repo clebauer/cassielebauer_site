@@ -7,21 +7,18 @@
   --color-5: #a2baff;
   --color-6: #d09fdd;
 
-  /* Grayscale */
+  /* Neutrals — one token per purpose */
   --white: #ffffff;
-  --off-white: #fafafa;
-  --off-white-alt: #f5f5f5;
-  --page-bg: #f4f4f4;
-  --gray-lightest: #f0f0f0;
-  --gray-lighter: #f3f3f3;
-  --gray-light: #dddddd;
-  --gray-hover: #e0e0e0;
-  --gray-mid: #aaaaaa;
-  --gray-dark: #666666;
+  --page-bg: #faf7fb;      /* page background, tinted toward --color-6 */
+  --surface: #ffffff;      /* cards, sidebar, main content panels */
+  --border-light: #e5e0e8; /* subtle dividers/borders, tinted to match page-bg */
+  --gray-hover: #e0e0e0;   /* hover states on neutral elements */
+  --gray-hover-border: #bbbbbb;
+  --gray-mid: #aaaaaa;     /* secondary icons, disabled states */
+  --gray-dark: #666666;    /* the header's border-bottom, etc. */
 
   /* Text */
   --text: #222222;
-  --text-dark: #2c2c2c;
   --text-heading: #333333;
   --text-muted: #777777;
 

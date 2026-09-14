@@ -1,11 +1,11 @@
 .resume-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12-column grid */
-  grid-auto-rows: 80px; /* row height; adjust to taste */
-  gap: 12px;
-  padding: 24px;
-  background-color: #fafafa;
-  font-size: 16px;
+  grid-auto-rows: var(--row-height); /* row height; adjust to taste */
+  gap: var(--space-12);
+  padding: var(--space-lg);
+  background-color: var(--surface);
+  font-size: var(--font-size-base);
 }
 
 /* Example positioning for each block */
