@@ -10,7 +10,7 @@ import './App.css'
 
 const routes = [
   { path: '/', component: <Home />, name: 'Home' },
-  // { path: '/resume', component: <Resume />, name: 'Resume' },
+  { path: '/resume', component: <Resume />, name: 'Resume' },
 ]
 
 function App() {

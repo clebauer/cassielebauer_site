@@ -4,7 +4,6 @@ function Home({ status }) {
   const [isOn, setIsOn] = useState(false);
   return (
     <>
-      <h1>hi there, Cassie here.</h1>
       <p>have some nifty gifties!</p>
       {status && <p>Status: {status}</p>}
 

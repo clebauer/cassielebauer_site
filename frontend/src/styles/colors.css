@@ -1,0 +1,35 @@
+:root {
+  /* Sidebar gradient */
+  --color-1: #f4b6b6;
+  --color-2: #f7cfa4;
+  --color-3: #f9e6a6;
+  --color-4: #bde3ae;
+  --color-5: #a2baff;
+  --color-6: #d09fdd;
+
+  /* Grayscale */
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --off-white-alt: #f5f5f5;
+  --page-bg: #f4f4f4;
+  --gray-lightest: #f0f0f0;
+  --gray-lighter: #f3f3f3;
+  --gray-light: #dddddd;
+  --gray-hover: #e0e0e0;
+  --gray-mid: #aaaaaa;
+  --gray-dark: #666666;
+
+  /* Text */
+  --text: #222222;
+  --text-dark: #2c2c2c;
+  --text-heading: #333333;
+  --text-muted: #777777;
+
+  /* Semantic / UI state */
+  --link-hover: var(--gray-mid);
+  --button-hover: #87a4fa;
+  --button-on-hover: #a7e090;
+  --highlight-bg: #d8eafd;
+  --highlight-border: #60a5fa;
+  --highlight-text: #1e3a8a;
+}
