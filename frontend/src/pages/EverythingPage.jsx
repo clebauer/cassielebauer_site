@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { items, TAGS } from "features/everything/data/everything";
-import "./Everything.css";
+import "features/everything/Everything.css";
 
 export default function Everything() {
   const [active, setActive] = useState("all");

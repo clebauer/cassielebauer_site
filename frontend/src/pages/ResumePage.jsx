@@ -1,7 +1,8 @@
 import React from "react";
 import LinkBadge from "components/ui/LinkBadge"
 import { github, linkedin, researchgate, ravelry} from 'assets/icons';
-import ResumeLayout from "components/layout/ResumeLayout"
+import ResumeLayout from "features/resume/layout/ResumeLayout"
+
 function Resume(){
     return (
     <>

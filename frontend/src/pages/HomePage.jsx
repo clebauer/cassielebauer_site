@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "components/ui/Icon";
-import "./Home.css";
+import "features/home/Home.css";
 
 const professional = [
   "I'm a senior full stack developer working in React and Python.",

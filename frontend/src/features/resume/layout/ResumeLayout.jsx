@@ -1,10 +1,10 @@
 import React from "react";
 import { HoverProvider } from "context/HoverContext";
 
-import Skills from "pages/resume/Skills";
-import Education from "pages/resume/Education";
-import Experience from "pages/resume/Experience";
-import Projects from "pages/resume/Projects";
+import Skills from "features/resume/Skills";
+import Education from "features/resume/Education";
+import Experience from "features/resume/Experience";
+import Projects from "features/resume/Projects";
 import "./ResumeLayout.css";
 
 export default function ResumeLayout() {

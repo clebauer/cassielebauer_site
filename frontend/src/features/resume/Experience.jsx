@@ -2,7 +2,6 @@ import React from "react";
 import ResumeSection from "features/resume/components/ResumeSection";
 import DatedEntry from "features/resume/components/DatedEntry";
 import { experience } from "features/resume/data/experience";
-import "./Experience.css";
 
 export default function Experience() {
   return (

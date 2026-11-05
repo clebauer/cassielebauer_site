@@ -4,8 +4,9 @@ import "./Sidebar.css";
 export default function Sidebar() {
   const items = [
      { id: "about", label: "about", to: "/" },
-     { id: "resume", label: "resume", to: "/" },
+     { id: "resume", label: "resume", to: "/resume" },
      { id: "tech", label: "tech", to: "/" },
+     { id: "miniapps", label: "mini apps", to: "/miniapps" },
      { id: "art", label: "art", to: "/" },
      { id: "community", label: "community", to: "/" },
      { id: "everything", label: "everything", to: "/everything" },
