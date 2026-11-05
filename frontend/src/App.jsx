@@ -5,12 +5,14 @@ import Sidebar from 'components/layout/Sidebar'
 
 import Home from 'pages/home/Home'
 import Resume from 'pages/resume/index'
+import Everything from 'pages/everything/Everything'
 
 import './App.css'
 
 const routes = [
   { path: '/', component: <Home />, name: 'Home' },
   { path: '/resume', component: <Resume />, name: 'Resume' },
+  { path: '/everything', component: <Everything />, name: 'Everything' },
 ]
 
 function App() {

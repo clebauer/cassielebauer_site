@@ -3,13 +3,20 @@ import "./Sidebar.css";
 
 export default function Sidebar() {
   const items = [
-    // { id: "home", label: "Home", to: "/" },
-    // { id: "resume", label: "Resume", to: "/resume" },
-    { id: "there", label: "there", to: "/" },
-    { id: "will", label: "will", to: "/" },
-    { id: "be", label: "be", to: "/" },
-    { id: "more", label: "more", to: "/" },
-    { id: "soon", label: "soon", to: "/" },
+     { id: "about", label: "about", to: "/" },
+     { id: "resume", label: "resume", to: "/" },
+     { id: "tech", label: "tech", to: "/" },
+     { id: "art", label: "art", to: "/" },
+     { id: "community", label: "community", to: "/" },
+     { id: "everything", label: "everything", to: "/everything" },
+//     { id: "there", label: "there", to: "/" },
+//     { id: "will", label: "will", to: "/" },
+//     { id: "be", label: "be", to: "/" },
+//     { id: "more", label: "more", to: "/" },
+//     { id: "soon", label: "soon", to: "/" },
+
+//     { id: "home", label: "Home", to: "/" },
+//     { id: "resume", label: "Resume", to: "/resume" },
 //     { id: "projects", label: "Projects", to: "/projects" },
 //     { id: "skills", label: "Skills", to: "/skills" },
 //     { id: "tools", label: "Tools", to: "/tools" },
