@@ -1,0 +1,82 @@
+.navbar {
+    position: relative;
+    color: var(--white);
+    padding: var(--space-10) 0;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    border: solid var(--gray-dark);
+    border-width: 0 0 var(--border-thick) 0;
+    background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--color-1) 55%, white),
+        color-mix(in srgb, var(--color-2) 55%, white),
+        color-mix(in srgb, var(--color-3) 55%, white),
+        color-mix(in srgb, var(--color-4) 55%, white),
+        color-mix(in srgb, var(--color-5) 55%, white),
+        color-mix(in srgb, var(--color-6) 55%, white)
+    );
+}
+
+.navbar .tagline {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: var(--text);
+    text-shadow: var(--white) -1px -1px;
+    margin-top: calc(var(--space-xs) * -1);
+}
+
+.site-title {
+    display: block;
+    font-size: var(--font-size-h1);
+    font-weight: 600;
+    color: var(--text);
+    text-shadow: var(--white) -1px -1px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    transition: color var(--transition-slow);
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-inline: 64px;
+    }
+
+    .site-title {
+        font-size: var(--font-size-h1-mobile);
+    }
+
+    .menu-button {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 50%;
+        right: var(--space-10);
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        color: var(--text-heading);
+        background: color-mix(in srgb, white 65%, transparent);
+        border: 1px solid color-mix(in srgb, var(--gray-dark) 40%, transparent);
+        border-radius: var(--radius-md);
+    }
+
+    .menu-button:hover {
+        background: white;
+    }
+
+    .menu-button:focus-visible {
+        outline: 2px solid var(--gray-dark);
+        outline-offset: 2px;
+    }
+
+    .menu-button svg {
+        width: 24px;
+        height: 24px;
+    }
+}
