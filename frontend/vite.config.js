@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import everythingEditor from "./vite-plugin-everything-editor";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), everythingEditor()],
   resolve: {
     alias: {
       pages: path.resolve(__dirname, 'src/pages'),

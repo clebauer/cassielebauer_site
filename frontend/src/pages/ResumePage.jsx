@@ -1,33 +1,13 @@
-import React from "react";
-import LinkBadge from "components/ui/LinkBadge"
-import { github, linkedin, researchgate, ravelry} from 'assets/icons';
-import ResumeLayout from "features/resume/layout/ResumeLayout"
+import Page from "components/ui/Page";
+import ResumeSection from "features/resume/ResumeSection";
+import { resume } from "features/resume/resume";
 
-function Resume(){
-    return (
-    <>
-    <div>
-        <LinkBadge href="https://www.github.com/clebauer"
-                    imgSrc={github}
-                    text="Github"
-                    alt="Github Logo"/>
-        <LinkBadge href="https://www.linkedin.com/in/cassielebauer"
-                    imgSrc={linkedin}
-                    text="LinkedIn"
-                    alt="LinkedIn Logo"/>
-        <LinkBadge href="https://www.researchgate.net/scientific-contributions/Cassie-Lebauer-2090529942"
-                    imgSrc={researchgate}
-                    text="ResearchGate"
-                    alt="ResearchGate Logo"/>
-        <LinkBadge href="https://www.ravelry.com/projects/QueerHearts/"
-                    imgSrc={ravelry}
-                    text="Ravelry"
-                    alt="Ravelry Logo"/>
-    </div>
-    <div>
-        <ResumeLayout/>
-    </div>
-    </>)
+export default function Resume() {
+  return (
+    <Page title="resume">
+      {resume.map((section) => (
+        <ResumeSection key={section.title} {...section} />
+      ))}
+    </Page>
+  );
 }
-
-export default Resume;

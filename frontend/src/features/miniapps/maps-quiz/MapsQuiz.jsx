@@ -125,16 +125,11 @@ export default function MapsQuiz({
       </header>
 
       <WorldMap found={found} current={current} lastId={lastId} status={status} />
-      {TOO_SMALL.length > 0 && (
-        <p className="cq-note">
-          Too tiny to see on the map, but they still count: {TOO_SMALL.join(", ")}.
-        </p>
-      )}
 
       {status === "idle" && (
         <div className="cq-panel">
           <p>
-            Order: {CONTINENTS.join(" → ")}. North America includes Central America and the Caribbean.
+            Order: {CONTINENTS.join(" → ")}. <br/> North America includes Central America and the Caribbean.<br/>
           </p>
           <button className="cq-btn cq-primary" onClick={() => dispatch({ type: "start" })}>
             Start

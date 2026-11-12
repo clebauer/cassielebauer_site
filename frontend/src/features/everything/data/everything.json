@@ -1,0 +1,665 @@
+{
+  "tags": [
+    {
+      "id": "tech",
+      "label": "tech",
+      "color": 5
+    },
+    {
+      "id": "research",
+      "label": "research",
+      "color": 2
+    },
+    {
+      "id": "creative",
+      "label": "creative",
+      "color": 6
+    },
+    {
+      "id": "community",
+      "label": "community",
+      "color": 3
+    },
+    {
+      "id": "leadership",
+      "label": "leadership",
+      "color": 4
+    },
+    {
+      "id": "articles",
+      "label": "articles",
+      "color": 5
+    },
+    {
+      "id": "awards",
+      "label": "awards",
+      "color": 2
+    },
+    {
+      "id": "college",
+      "label": "college",
+      "color": 6
+    },
+    {
+      "id": "fun",
+      "label": "for fun",
+      "color": 1
+    },
+    {
+      "id": "indeed",
+      "label": "indeed",
+      "color": 5
+    },
+    {
+      "id": "centene",
+      "label": "centene",
+      "color": 5
+    },
+    {
+      "id": "s-a",
+      "label": "s&a",
+      "color": 5
+    },
+    {
+      "id": "events",
+      "label": "events",
+      "color": 3
+    },
+    {
+      "id": "other-jobs",
+      "label": "other jobs!",
+      "color": 5
+    }
+  ],
+  "items": [
+    {
+      "title": "Speaker, Tableau Conference",
+      "blurb": "Accessible dashboard design: how to reduce barriers and enable interaction.",
+      "year": 2022,
+      "tags": [
+        "tech",
+        "articles",
+        "indeed"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "session page",
+          "url": "https://www.tableau.com/events/tc/2022/indeed-accessible-dashboard-design-how-reduce-barriers-and-enable-interaction"
+        },
+        {
+          "label": "speaker announcement",
+          "url": "https://www.linkedin.com/posts/timberry2_tableau-conference-2022-speakers-sneak-peek-activity-6927660279853940736-veHp"
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "blurb": "all of my code and apps c:",
+      "year": 2017,
+      "ongoing": true,
+      "tags": [
+        "tech",
+        "creative"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "github.com/clebauer",
+          "url": "https://github.com/clebauer"
+        }
+      ]
+    },
+    {
+      "title": "Co-author, breath biomarkers of lung cancer",
+      "blurb": "Blinded validation of breath biomarkers of lung cancer, a potential ancillary to chest CT screening. PLOS ONE.",
+      "year": 2015,
+      "tags": [
+        "research",
+        "s-a"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0142484"
+        }
+      ]
+    },
+    {
+      "title": "Co-author, breath biomarkers of breast cancer",
+      "blurb": "Breath mass ion biomarkers of breast cancer. Journal of Breath Research.",
+      "year": 2017,
+      "tags": [
+        "research",
+        "s-a"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "http://iopscience.iop.org/article/10.1088/1752-7163/aa549b/meta"
+        }
+      ]
+    },
+    {
+      "title": "all scientific publications",
+      "blurb": "Everything I've been published in!",
+      "year": 2015,
+      "endYear": 2017,
+      "tags": [
+        "research",
+        "s-a"
+      ],
+      "starred": false,
+      "hidden": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/scientific-contributions/Cassie-Lebauer-2090529942"
+        },
+        {
+          "label": "PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27991859/"
+        }
+      ]
+    },
+    {
+      "title": "Ravelry: QueerHearts",
+      "blurb": "my finished and in progress fiber arts projects :)",
+      "year": 2012,
+      "ongoing": true,
+      "tags": [
+        "creative"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "projects",
+          "url": "https://www.ravelry.com/projects/QueerHearts"
+        }
+      ]
+    },
+    {
+      "title": "Knitting patterns i've designed",
+      "blurb": "expressing my creativity one pattern at a time",
+      "year": 2022,
+      "ongoing": true,
+      "tags": [
+        "creative"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "patterns",
+          "url": "https://www.ravelry.com/patterns/sources/cassie-lebauer/patterns"
+        }
+      ]
+    },
+    {
+      "title": "songs under Reinasparks",
+      "blurb": "my own music; i hope you enjoy it. <3",
+      "year": 2024,
+      "ongoing": true,
+      "tags": [
+        "creative"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "Bandcamp",
+          "url": "https://reinasparks.bandcamp.com/"
+        },
+        {
+          "label": "soundcloud",
+          "url": "http://soundcloud.com/reinasparks"
+        }
+      ]
+    },
+    {
+      "title": "Founder, Alterknitive",
+      "blurb": "the queer neurodiverse fiber arts community where you belong. we host virtual and in-person events!",
+      "year": 2023,
+      "ongoing": true,
+      "tags": [
+        "community",
+        "creative",
+        "leadership"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "Founder, AccessIndeed",
+      "blurb": "An Indeed employee group advocating for accessibility for people with visible and invisible disabilities",
+      "year": 2017,
+      "endYear": 2020,
+      "tags": [
+        "leadership",
+        "community",
+        "tech",
+        "indeed"
+      ],
+      "starred": true,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "President, Pi Mu Epsilon",
+      "blurb": "Led the SUNY Potsdam chapter of the mathematics honor society, 2012 to 2013.",
+      "year": 2012,
+      "endYear": 2013,
+      "tags": [
+        "leadership",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "president, 'SPEAK' club",
+      "blurb": "Sex Positive Education and Awareness ‘Klub’",
+      "year": 2012,
+      "endYear": 2013,
+      "tags": [
+        "leadership",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "Vice President, LGBTqaa",
+      "year": 2012,
+      "endYear": 2013,
+      "tags": [
+        "leadership",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "Treasurer, lgbtqaa",
+      "year": 2011,
+      "endYear": 2012,
+      "tags": [
+        "leadership",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "directory, board of directors at PACES",
+      "blurb": "helped bring tim hortons to suny potsdam, and was a vetted principal on a state liquor license at 20 y,o.",
+      "year": 2011,
+      "endYear": 2012,
+      "tags": [
+        "leadership",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "paces",
+          "url": "https://www.pacesservices.com/"
+        }
+      ]
+    },
+    {
+      "title": "secretary, sES",
+      "blurb": "potsdam's Student Entertainment Services",
+      "year": 2010,
+      "tags": [
+        "leadership",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "pi recitation contest winner @ SUNY Potsdam",
+      "blurb": "recited 61 digits from memory!",
+      "year": 2012,
+      "tags": [
+        "articles",
+        "college",
+        "awards"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "article",
+          "url": "http://readme.readmedia.com/SUNY-Potsdam-Math-Alliance-CSTEP-Celebrate-Pi-Day/3797387/print"
+        }
+      ]
+    },
+    {
+      "title": "professional etiquette seminar article",
+      "blurb": "the event was catered by the best restaurant in town, how could i not",
+      "year": 2012,
+      "tags": [
+        "articles",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "article",
+          "url": "http://readme.readmedia.com/SUNY-Potsdam-Students-Learn-about-Professional-Etiquette-at-Seminar/3769768"
+        }
+      ]
+    },
+    {
+      "title": "NJIT honor roll",
+      "blurb": "Listed in the NJIT magazine honor roll, spring/summer 2018.",
+      "year": 2018,
+      "tags": [
+        "awards",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "njit",
+          "url": "https://magazine.njit.edu/sites/magazine/files/springsummer2018_honorroll.pdf"
+        }
+      ]
+    },
+    {
+      "title": "Student Affairs Division of Excellence Award",
+      "year": 2012,
+      "tags": [
+        "awards",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "Susan Portugal Mathematics and Business Award",
+      "year": 2012,
+      "tags": [
+        "awards",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "Pi Mu Epsilon Mathematics Honor Society",
+      "blurb": "Fall 2012, Spring 2012, Fall 2011, Spring 2011",
+      "year": 2011,
+      "endYear": 2012,
+      "tags": [
+        "awards",
+        "college"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "Organized gender-neutral housing at SUNY Potsdam",
+      "blurb": "established the Campus Change Committee under the SUNY Potsdam LGBTAA and introduced the first Gender Neutral Housing floor to SUNY Potsdam's Campus. I also produced all paperwork to be filled out by interested individuals.",
+      "year": 2012,
+      "endYear": 2013,
+      "tags": [
+        "college",
+        "community"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "2018 agreement",
+          "url": "https://www.potsdam.edu/sites/default/files/GenderInclusiveAgreement2018.pdf"
+        },
+        {
+          "label": "GETF minutes",
+          "url": "https://web.archive.org/web/20141114115644/http://www2.potsdam.edu/LGBTA/whatwedo/getf.html"
+        }
+      ]
+    },
+    {
+      "title": "conference attendee",
+      "blurb": "Student Leadership Conference: 2012 (2x), 2011, 2010 (2x)\nNorth East LGBT Conference: 2013, 2012, 2010\nMAA Seaway Section Conference: 2012, 2011, 2009\nHudson River Undergraduate Math Conference: 2011",
+      "year": 2009,
+      "ongoing": true,
+      "tags": [
+        "college",
+        "events"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "assorted jobs in college",
+      "blurb": "• Phonathon Caller, Annual Fund for Potsdam (Oct. 2012 to May 2013)\n• Math Tutor, SUNY Potsdam Carson Math Lab (Sept. 2012 to Dec. 2012)\n• Ice Cream Server, SUNY Potsdam P.A.C.E.S (Feb. 2010 to Dec. 2012)\n• calculus Tutor, SUNY Potsdam Student Success Center (Sept. 2011 to Dec. 2011)\n• Student Office Assistant, Potsdam Office of Extended Education (June 2011 to Sept. 2011)",
+      "year": 2010,
+      "endYear": 2013,
+      "tags": [
+        "college",
+        "other-jobs"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "a post that hit r/all!",
+      "blurb": "r/mildlyinteresting post about the wear and tear on monkey bars!",
+      "year": 2021,
+      "tags": [
+        "fun"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "reddit",
+          "url": "https://www.reddit.com/r/mildlyinteresting/comments/p5s5mf/wearandtear_on_playground_monkeybars_decreases_as/"
+        }
+      ]
+    },
+    {
+      "title": "three-time speed stacking winner",
+      "year": 2010,
+      "tags": [
+        "fun"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/2013_speedstack.jpg",
+        "alt": ""
+      },
+      "links": []
+    },
+    {
+      "title": "first unpacking tattoo!",
+      "blurb": "first person to get a tattoo from the game unpacking, commented on by the game designer!",
+      "year": 2024,
+      "tags": [
+        "fun"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "twitter",
+          "url": "https://x.com/cassielebauer/status/1835036960756519309"
+        }
+      ]
+    },
+    {
+      "title": "fifth top all post in r/unpacking",
+      "year": 2024,
+      "tags": [
+        "fun"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "reddit",
+          "url": "https://www.reddit.com/r/Unpacking/comments/1fhkgih/finally_got_my_unpacking_tattoo_of_piggy/"
+        }
+      ]
+    },
+    {
+      "title": "beat *the* Zoom cast member at cups",
+      "blurb": "i met her in a sign language class in ~2018 and won fair and square. never been prouder.",
+      "year": 2018,
+      "tags": [
+        "fun"
+      ],
+      "starred": false,
+      "reviewed": true,
+      "image": {
+        "src": "/images/everything/default.jpg",
+        "alt": ""
+      },
+      "links": [
+        {
+          "label": "literally her",
+          "url": "https://www.facebook.com/watch/?v=3509223929238797"
+        }
+      ]
+    }
+  ]
+}

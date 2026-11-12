@@ -1,0 +1,68 @@
+.find-me {
+  list-style: none;
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm) var(--space-12);
+}
+
+.find-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-6) var(--space-md) var(--space-6) var(--space-12);
+  border: var(--border-thick) solid var(--pill-color);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: background var(--transition-base), transform var(--transition-fast);
+}
+
+.find-pill:hover {
+  background: var(--pill-color);
+  transform: translateY(-1px);
+}
+
+.find-pill:focus-visible {
+  outline: 3px solid var(--highlight-border);
+  outline-offset: 2px;
+}
+
+.find-pill svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .find-pill { transition: none; }
+  .find-pill:hover { transform: none; }
+}
+
+@media (max-width: 768px) {
+  .find-pill {
+    padding: var(--space-6);
+  }
+
+  .find-pill-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}

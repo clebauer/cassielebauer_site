@@ -7,7 +7,7 @@
   --color-5: #a2baff;
   --color-6: #d09fdd;
 
-  /* Neutrals — one token per purpose */
+  /* Neutrals: one token per purpose */
   --white: #ffffff;
   --page-bg: #faf7fb;      /* page background, tinted toward --color-6 */
   --surface: #ffffff;      /* cards, sidebar, main content panels */

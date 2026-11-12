@@ -1,201 +1,23 @@
-// One list for everything. Pages filter it: featured items go on the landing/tech/art pages,
-// the "everything" page shows all of it. To add something, add one object.
-// links: array of { label, url }. year: number or null. tags: see TAGS below.
-// image: { src, alt }. Files live in frontend/public/images/everything/. Use alt: "" for decorative images.
+// The data now lives in everything.json. You don't edit this file.
+// To add or change things, run `npm run dev` and open /admin/everything.
+// (You can also edit everything.json by hand: it's just a list.)
+//
+// dates on each item:
+//   year: start year. endYear: optional, for ranges.
+//   ongoing: true if it's still going ("2023 – present").
+//   Leave all three off if you don't know the date.
+//
+// tags: the FIRST tag is the item's main topic; extra tags make it show up
+// under more filters. Tag colors: 1 pink, 2 orange, 3 yellow, 4 green, 5 blue, 6 purple.
+// hidden: true keeps an item in the file but off the page.
+// reviewed: true is only for the admin page ("feels good"). It's stripped out
+//   here, so the public page never sees it.
 
-export const TAGS = [
-  { id: "tech", label: "tech" },
-  { id: "research", label: "research" },
-  { id: "making", label: "making" },
-  { id: "music", label: "music" },
-  { id: "community", label: "community" },
-  { id: "press", label: "talks & press" },
-  { id: "honors", label: "honors" },
-  { id: "fun", label: "for fun" },
-];
+import data from "./everything.json";
 
-export const items = [
-  {
-    title: "Speaker, Tableau Conference 2022",
-    blurb: "Accessible dashboard design: how to reduce barriers and enable interaction.",
-    year: 2022,
-    tags: ["tech", "press"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [
-      {
-        label: "session page",
-        url: "https://www.tableau.com/events/tc/2022/indeed-accessible-dashboard-design-how-reduce-barriers-and-enable-interaction",
-      },
-      {
-        label: "speaker announcement",
-        url: "https://www.linkedin.com/posts/timberry2_tableau-conference-2022-speakers-sneak-peek-activity-6927660279853940736-veHp",
-      },
-    ],
-  },
-  {
-    title: "Co-author, breath biomarkers of lung cancer",
-    blurb: "Blinded validation of breath biomarkers of lung cancer, a potential ancillary to chest CT screening. PLOS ONE.",
-    year: 2015,
-    tags: ["research"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [{ label: "paper", url: "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0142484" }],
-  },
-  {
-    title: "Co-author, breath biomarkers of breast cancer",
-    blurb: "Breath mass ion biomarkers of breast cancer. Journal of Breath Research.",
-    year: 2017,
-    tags: ["research"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [{ label: "paper", url: "http://iopscience.iop.org/article/10.1088/1752-7163/aa549b/meta" }],
-  },
-  {
-    title: "Research assistant, NJIT CryptoLab",
-    blurb: "Helped build a fully homomorphic crypto library, a C++ circuit simulator, and a small programming language on top of it.",
-    year: 2016,
-    tags: ["research", "tech"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [],
-  },
-  {
-    title: "Publication record",
-    blurb: "Everything I've published, in the usual places.",
-    year: null,
-    tags: ["research"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [
-      { label: "ResearchGate", url: "https://www.researchgate.net/scientific-contributions/Cassie-Lebauer-2090529942" },
-      { label: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/27991859/" },
-    ],
-  },
-  {
-    title: "Founder, Access Indeed",
-    blurb: "An employee group for visible and invisible disabilities, and for better access and education around them.",
-    year: 2017,
-    tags: ["community"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [],
-  },
-  {
-    title: "Founder, Alterknitive",
-    blurb: "A place for fiber artists to gather. Website in progress.",
-    year: null,
-    tags: ["community", "making"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [], // TODO: add the Meetup and Instagram links
-  },
-  {
-    title: "Organized gender-neutral housing at SUNY Potsdam",
-    blurb: "Started the campaign that brought gender-neutral housing to campus.",
-    year: 2012,
-    tags: ["community"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [],
-  },
-  {
-    title: "Ravelry: QueerHearts",
-    blurb: "My finished knits.",
-    year: null,
-    tags: ["making"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [{ label: "projects", url: "https://www.ravelry.com/projects/QueerHearts" }],
-  },
-  {
-    title: "Knitting patterns",
-    blurb: "Patterns I've designed and published.",
-    year: null,
-    tags: ["making"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [{ label: "patterns", url: "https://www.ravelry.com/patterns/sources/cassie-lebauer/patterns" }],
-  },
-  {
-    title: "Songs as reinasparks",
-    blurb: "My own music.",
-    year: null,
-    tags: ["music"],
-    featured: true,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [
-      { label: "Bandcamp", url: "https://reinasparks.bandcamp.com/" },
-      { label: "SoundCloud", url: "http://soundcloud.com/reinasparks" },
-    ],
-  },
-  {
-    title: "A post that hit r/all",
-    blurb: "My post on r/Unpacking. TODO: confirm the title, year, and ranking before publishing.",
-    year: null,
-    tags: ["fun"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [
-      {
-        label: "the post",
-        url: "https://www.reddit.com/r/Unpacking/comments/1fhkgih/finally_got_my_unpacking_tattoo_of_piggy/",
-      },
-    ],
-  },
-  {
-    title: "SUNY Potsdam: Celebrate Pi Day",
-    blurb: "Campus news coverage of the Math Alliance and CSTEP Pi Day event. TODO: confirm how you appear in it.",
-    year: null,
-    tags: ["press"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [
-      {
-        label: "article",
-        url: "http://readme.readmedia.com/SUNY-Potsdam-Math-Alliance-CSTEP-Celebrate-Pi-Day/3797387/print",
-      },
-    ],
-  },
-  {
-    title: "SUNY Potsdam: Professional etiquette seminar",
-    blurb: "Campus news coverage of a student seminar. TODO: confirm how you appear in it.",
-    year: null,
-    tags: ["press"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [
-      {
-        label: "article",
-        url: "http://readme.readmedia.com/SUNY-Potsdam-Students-Learn-about-Professional-Etiquette-at-Seminar/3769768",
-      },
-    ],
-  },
-  {
-    title: "NJIT honor roll",
-    blurb: "Listed in the NJIT magazine honor roll, spring/summer 2018.",
-    year: 2018,
-    tags: ["honors"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [{ label: "magazine PDF", url: "https://magazine.njit.edu/sites/magazine/files/springsummer2018_honorroll.pdf" }],
-  },
-  {
-    title: "President, Pi Mu Epsilon",
-    blurb: "Led the SUNY Potsdam chapter of the mathematics honor society, 2012 to 2013.",
-    year: 2013,
-    tags: ["honors", "community"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [],
-  },
-  {
-    title: "GitHub",
-    blurb: "Code, including a lot of works in progress.",
-    year: null,
-    tags: ["tech"],
-    featured: false,
-    image: { src: "/images/everything/default.jpg", alt: "" },
-    links: [{ label: "github.com/clebauer", url: "https://github.com/clebauer" }],
-  },
-];
+export const items = data.items
+  .filter((i) => !i.hidden)
+  .map(({ reviewed, ...item }) => item); // eslint-disable-line no-unused-vars
+
+// only topics that something visible actually uses, so there are no empty filter chips
+export const TAGS = data.tags.filter((t) => items.some((i) => i.tags.includes(t.id)));

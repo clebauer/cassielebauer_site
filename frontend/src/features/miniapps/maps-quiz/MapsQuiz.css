@@ -1,4 +1,3 @@
-/* Theme it by overriding these variables on .cq-root (or any parent). */
 .cq-root {
   --cq-fg: #1d2330;
   --cq-muted: #5b6475;
@@ -10,6 +9,7 @@
   --cq-accent: #2b4fd8;
   --cq-good: #1c7c3b;
   --cq-bad: #b3261e;
+
   /* one colour per continent, in cycle order */
   --cq-c0: #e4572e; /* North America */
   --cq-c1: #e0a100; /* South America */
@@ -26,6 +26,7 @@
   color: var(--cq-fg);
   font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
+
 @media (prefers-color-scheme: dark) {
   .cq-root {
     --cq-fg: #e9edf5;

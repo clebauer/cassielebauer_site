@@ -1,39 +1,33 @@
 @import './styles/colors.css';
 @import './styles/variables.css';
 
-/* Global reset and styling */
+/* global reset and styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-transform: lowercase; /* Ensures the whole page uses lowercase */
+  text-transform: lowercase;
 }
 
-/* Ensure the page takes up the full height and width */
 html, body {
   height: 100%;
   margin: 0;
-  overflow-x: hidden;
-}
-
-/* Make sure root div for React takes up the full height and width */
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Makes sure the app fills the viewport */
-  width: 100%; /* Ensures the app spans the full width */
 }
 
 body {
   font-family: 'Merriweather', sans-serif;
   background-color: var(--page-bg);
-  color: var(--text-heading);   /* was hardcoded #2c2c2c */
+  color: var(--text-heading);
   line-height: 1.6;
-  min-height: 100vh;
-  padding: var(--space-20);     /* was hardcoded 20px */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow: hidden;   /* page never scrolls; card inside does */
+}
 
+#root {
+  height: 100dvh;
+  max-width: calc(var(--content-max-width) + 2 * var(--space-20));
+  margin: 0 auto;
+  padding: var(--space-20);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: var(--space-15);
 }

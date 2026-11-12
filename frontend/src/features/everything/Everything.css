@@ -1,25 +1,64 @@
-.intro { color: var(--text-muted); font-size: var(--font-size-sm); margin: 0 0 var(--space-sm); }
+.intro {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-sm);
+}
 
-.filters { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-bottom: var(--space-xs); }
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font: inherit;
   font-size: var(--font-size-sm);
   padding: 2px var(--space-sm);
-  border: var(--border-thin) solid var(--color-5);
+  border: var(--border-thin) solid var(--chip-color, var(--color-5));
   border-radius: var(--radius-pill);
   background: transparent;
   color: var(--text);
   cursor: pointer;
   transition: background var(--transition-base);
 }
-.chip:hover { background: var(--highlight-bg); }
-.chip[aria-pressed="true"] { background: var(--color-5); font-weight: 700; }
-.chip:focus-visible { outline: 3px solid var(--highlight-border); outline-offset: 2px; }
 
-.count { color: var(--text-muted); font-size: 13px; margin: 0 0 var(--space-xs); }
+.chip svg {
+  width: 16px;
+  height: 16px;
+}
 
-.entries { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-sm); }
+.chip:hover {
+  background: color-mix(in srgb, var(--chip-color, var(--color-5)) 22%, white);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--chip-color, var(--color-5));
+  font-weight: 700;
+}
+
+.chip:focus-visible {
+  outline: 3px solid var(--highlight-border);
+  outline-offset: 2px;
+}
+
+.count {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 0 0 var(--space-xs);
+}
+
+.entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
 .entry {
   display: flex;
   gap: var(--space-md);
@@ -27,7 +66,12 @@
   border-top: var(--border-thin) solid var(--border-light);
   padding-top: var(--space-sm);
 }
-.entry-body { flex: 1; min-width: 0; }
+
+.entry-body {
+  flex: 1;
+  min-width: 0;
+}
+
 .thumb {
   width: 64px;
   height: 64px;
@@ -36,10 +80,103 @@
   border-radius: var(--radius-lg);
 }
 
-.entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-md); flex-wrap: wrap; }
-.entry h3 { margin: 0; font-size: var(--font-size-base); color: var(--text-heading); }
-.year { color: var(--text-muted); font-size: var(--font-size-sm); font-variant-numeric: tabular-nums; }
-.entry p { margin: 2px 0 0; font-size: var(--font-size-sm); }
-.links { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
 
-.entries { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-md); }
+.entry-title {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--text-heading);
+}
+
+.year {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.entry p {
+  margin: 2px 0 0;
+  font-size: var(--font-size-sm);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.entries {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-md);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-sm) var(--space-md);
+}
+
+/* list view: one column, no images, tighter rows */
+.entries.entries--list {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.entries--list .thumb {
+  display: none;
+}
+
+.entries--list .entry {
+  padding: var(--space-sm) 0;
+}
+
+.entries--list .entry-body p {
+  margin: 0;
+}
+
+.entry-title {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--text-heading);
+}
+
+.entry-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-sm);
+  min-width: 0;
+}
+
+.entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.entry-links .source-link {
+  margin-left: 0;
+}
+
+.entry-star svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-3);
+}
+
+.entry-star {
+  display: flex;   /* removes the stray line-height gap that pushes the star up */
+}
+

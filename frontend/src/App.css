@@ -1,57 +1,4 @@
-/* Header styles with a fresh, minimalist touch */
-header {
-  background: linear-gradient(
-    135deg,
-    var(--color-1), var(--color-2), var(--color-3),
-    var(--color-4), var(--color-5), var(--color-6)
-  );
-  color: var(--white);
-  padding: var(--space-10) 0;
-  text-align: center;
-  border-radius: var(--radius-lg);
-  border: solid var(--gray-dark);
-  border-width: 0 0 var(--border-thick) 0;
-  max-width: var(--content-max-width);
-  margin: 0 auto;
-  width: 100%;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: var(--space-30);
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  font-size: var(--font-size-lg);
-  font-weight: 500;
-  color: var(--text);
-  text-decoration: none;
-  text-shadow: var(--white) -1px -1px;
-  transition: color var(--transition-slow);
-}
-
-nav ul li a:hover {
-  color: var(--gray-mid);
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-  font-weight: 600;
-  color: var(--text);
-  text-shadow: var(--white) -1px -1px;
-  letter-spacing: 1px;
-  transition: color var(--transition-slow);
-  text-align: center;
-}
-
+/* Basics */
 h2 {
   font-size: var(--font-size-xl);
   text-align: center;
@@ -94,50 +41,217 @@ button:hover {
   transform: translateY(-5px);
 }
 
+/* App layout */
+.app-layout {
+  display: flex;
+  gap: var(--space-15);
+  min-height: 0;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+}
+
+/* one card per column */
+.panel {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* header row for both columns */
+.col-title {
+  display: block;
+  flex-shrink: 0;
+  margin: 0;
+  padding: var(--space-md) var(--space-20);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-heading);
+  text-decoration: none;
+  border-bottom: var(--border-thin) solid var(--gray-dark);
+}
+
+/* left one is the home link; light when not in use, bold when home */
+.col-title.brand {
+  font-weight: 400;
+  color: var(--gray-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.col-title.brand.active {
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.col-title.brand:hover {
+  color: var(--text-heading);
+}
+
+.col-title.brand:focus-visible {
+  outline: 2px solid var(--gray-dark);
+  outline-offset: -4px;
+}
+
+.col-title.brand svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+/* header row holds parent crumbs + the page name */
+.col-title--crumbs {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-10);
+}
+
+.col-title--crumbs h1 {
+  margin: 0;
+  font: inherit;
+  font-weight: 700;
+}
+
+.parent-crumbs {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-10);
+}
+
+.parent-crumb {
+  font-weight: 400;
+  color: var(--gray-dark);
+  text-decoration: none;
+}
+
+.parent-crumb:hover {
+  color: var(--text-heading);
+  text-decoration: underline;
+}
+
+.parent-crumb-sep {
+  font-weight: 400;
+  color: var(--gray-dark);
+}
+
+.page-content {
+  flex: 1;
+  min-height: 0;
+  padding: var(--space-15) var(--space-20) var(--space-20);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-mid) transparent;
+}
+
+.page-content > :first-child,
+.home > :first-child {
+  margin-top: 0;
+}
+
+/* section headings with the slow wave */
+.squiggle-title {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 var(--space-sm);
+  padding: 0 0 8px;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  text-align: left;
+  color: var(--text-heading);
+}
+
+.squiggle-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: var(--squiggle-color, var(--color-6));
+  -webkit-mask: url("assets/squiggle.svg") repeat-x left bottom;
+  mask: url("assets/squiggle.svg") repeat-x left bottom;
+}
+
+/* mini apps */
+.app-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-15);
+}
+
+.app-card {
+  display: block;
+  height: 100%;
+  padding: var(--space-15) var(--space-20);
+  border: 2px solid color-mix(in srgb, var(--card-color) 60%, white);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--card-color) 8%, white);
+  color: var(--text-heading);
+  text-decoration: none;
+  transition: background-color var(--transition-slow), transform var(--transition-slow);
+}
+
+.app-card:hover {
+  background: color-mix(in srgb, var(--card-color) 18%, white);
+}
+
+.app-card:focus-visible {
+  outline: 2px solid var(--gray-dark);
+  outline-offset: 3px;
+}
+
+/* only lift for people who haven't asked for less motion */
+@media (prefers-reduced-motion: no-preference) {
+  .app-card:hover { transform: translateY(-3px); }
+}
+
+/* global h2 centers and pads, reset it inside cards */
+.app-card h2 {
+  margin: 0 0 var(--space-xs);
+  padding: 0;
+  text-align: left;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+}
+
+.app-card p {
+  margin: 0;
+  color: var(--gray-dark);
+}
+
+/* phones: normal page scrolling */
 @media (max-width: 768px) {
   body {
+    overflow: auto;
+  }
+
+  #root {
+    height: auto;
+    min-height: 100dvh;
     padding: var(--space-10);
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: var(--space-15);
-  }
-
-  .App {
-    padding: var(--space-25) var(--space-15);
-  }
-
-  h1 {
-    font-size: var(--font-size-h1-mobile);
-  }
-
-  p {
-    font-size: var(--font-size-base);
   }
 
   button {
     padding: var(--space-10) var(--space-20);
   }
-}
 
-/* App organization */
-.app-layout {
-  display: flex;
-  gap: var(--space-15);
-  margin-top: var(--space-15);
-  min-height: calc(85vh); /* adjust if header height differs */
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-.app-main {
-  flex: 1;
-  padding: var(--space-20);
-  background-color: var(--surface);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  overflow-x: hidden;
+  .app-main,
+  .panel,
+  .page-content {
+    overflow: visible;
+  }
 }

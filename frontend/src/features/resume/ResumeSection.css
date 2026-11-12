@@ -1,0 +1,92 @@
+.resume-section {
+  --resume-col: 9rem;
+  --resume-gap: var(--space-25);
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--resume-col) minmax(0, 1fr);
+  column-gap: var(--resume-gap);
+  align-items: start;
+  padding: var(--space-20) 0;
+}
+
+.resume-section:first-child {
+  padding-top: 0;
+}
+
+/* wavy vertical divider between the label and the content */
+.resume-section::before {
+  content: "";
+  position: absolute;
+  top: var(--space-20);
+  bottom: var(--space-20);
+  left: calc(var(--resume-col) + var(--resume-gap) / 2 - 3px);
+  width: 6px;
+  background: color-mix(in srgb, var(--gray-dark) 35%, transparent);
+  -webkit-mask: url("assets/squiggle-vertical.svg") repeat-y center top;
+  mask: url("assets/squiggle-vertical.svg") repeat-y center top;
+}
+
+.resume-section:first-child::before {
+  top: 0;
+}
+
+.resume-section-title {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+/* one job or school */
+.resume-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--space-12);
+}
+
+.resume-entry + .resume-entry {
+  margin-top: var(--space-20);
+}
+
+.entry-name {
+  grid-column: 1;
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.entry-dates {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  white-space: nowrap;
+  color: var(--gray-dark);
+}
+
+.entry-role {
+  grid-column: 1 / -1;
+  margin: 0 0 var(--space-sm);
+  color: var(--text-heading);
+}
+
+.resume-entry .facts {
+  grid-column: 1 / -1;
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 700px) {
+  .resume-section {
+    display: block;
+  }
+
+  .resume-section::before {
+    display: none;
+  }
+
+  .resume-section-title {
+    margin-bottom: var(--space-12);
+  }
+}
