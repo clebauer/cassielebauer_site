@@ -73,12 +73,12 @@
   .home-photo {
     position: static;
     float: right;
-    width: 84px;
-    height: 84px;
-    object-fit: cover;
-    object-position: center 20%; /* keeps your face in the crop */
-    margin: 0 var(--space-10) var(--space-sm) var(--space-md);
+    width: var(--photo-width); /* same width as before; goes 110px to 190px */
+    height: auto;              /* desktop stretches it with top/bottom, so reset that */
+    margin: var(--space-sm) var(--space-10) var(--space-sm) var(--space-md);
     border-radius: 0.75rem;
     rotate: 4deg;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
   }
 }
+
