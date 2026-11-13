@@ -19,6 +19,11 @@ export default function Home() {
   return (
     <Page title="about me">
       <div className="home">
+        <img className="home-photo"
+          src={portrait}
+          alt="Cassie smiling and glancing up and to the left, one hand behind her head, outdoors.
+               She has half-pink half-purple hair, a septum ring and spider bites,
+               and wears a hand-knit black shawl with rainbow stripes." />
         <FactList title="professionally," facts={professional} />
         <FactList title="personally," facts={personal} />
 
@@ -36,11 +41,7 @@ export default function Home() {
 {/*           ))} */}
 {/*         </div> */}
 
-        <img className="home-photo"
-        src={portrait}
-        alt="Cassie smiling and glancing up and to the left, one hand behind her head, outdoors.
-             She has half-pink half-purple hair, a septum ring and spider bites,
-             and wears a hand-knit black shawl with rainbow stripes." />
+
       </div>
     </Page>
   );

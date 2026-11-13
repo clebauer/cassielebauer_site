@@ -72,9 +72,10 @@
 
   .home-photo {
     position: static;
-    display: block;
-    width: 200px;
-    margin: 1.5rem auto 0;
-    rotate: none;
+    float: right;
+    width: clamp(90px, 26vw, 140px);
+    height: auto;
+    margin: 0 var(--space-10) var(--space-sm) var(--space-md);
+    rotate: 4deg;
   }
 }

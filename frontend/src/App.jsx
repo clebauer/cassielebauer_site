@@ -1,7 +1,8 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect, useState, lazy, Suspense } from "react";
+import { Routes, Route } from 'react-router-dom'
+import { lazy, Suspense } from "react";
 
 import Header from 'components/layout/Header'
+import MobileNav from 'components/layout/MobileNav'
 import Sidebar from 'components/layout/Sidebar'
 
 import Home from 'pages/HomePage'
@@ -25,26 +26,12 @@ const routes = [
 ]
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const { pathname } = useLocation();
-
-  // close the menu after navigating
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
-  // close the menu with Esc
-  useEffect(() => {
-    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
   return (
     <>
-      <Header routes={routes} menuOpen={menuOpen} onMenuToggle={() => setMenuOpen((o) => !o)} />
+      <Header />
+      <MobileNav />
       <div className="app-layout">
-        <Sidebar open={menuOpen} onNavigate={() => setMenuOpen(false)} />
+        <Sidebar />
         <main className="app-main">
           <Routes>
             {routes.map(({ path, component }) => (

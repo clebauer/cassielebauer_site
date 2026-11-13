@@ -1,0 +1,70 @@
+/* hidden everywhere except phones */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin-top: var(--space-10);
+    padding: var(--space-sm) 0;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0 var(--space-12);
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    /* soft fade on the right edge hints that the row can scroll */
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+  }
+
+  .mobile-nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-height: 40px;
+    padding: var(--space-sm) var(--space-md);
+    white-space: nowrap;
+    scroll-snap-align: start;
+    border: var(--border-thick) solid var(--pill-color);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--text);
+    font-size: var(--font-size-md);
+    text-decoration: none;
+  }
+
+  .mobile-nav-link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  /* the page you're on is filled in */
+  .mobile-nav-link.active {
+    background: var(--pill-color);
+    font-weight: 600;
+  }
+
+  .mobile-nav-link:focus-visible {
+    outline: 3px solid var(--highlight-border);
+    outline-offset: 2px;
+  }
+}
