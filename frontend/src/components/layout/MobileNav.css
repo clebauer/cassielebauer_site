@@ -3,36 +3,28 @@
   display: none;
 }
 
-
 @media (max-width: 768px) {
+  /* sits inside .site-top (see Header.css), which is what sticks to the top */
   .mobile-nav {
     display: block;
     min-width: 0;
     max-width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    margin-top: var(--space-10);
-    padding: var(--space-sm) 0;
-    background: color-mix(in srgb, var(--surface) 92%, transparent);
-    backdrop-filter: blur(6px);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    padding: 6px 0;
   }
 
   .mobile-nav ul {
     display: flex;
-    gap: var(--space-sm);
+    gap: 6px;
     min-width: 0;
     margin: 0;
-    padding: 0 var(--space-12);
+    padding: 0 var(--space-sm);
     list-style: none;
     overflow-x: auto;
     scroll-snap-type: x proximity;
     scrollbar-width: none;
-    /* soft fade on the right edge hints that the row can scroll */
-    -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
-    mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+    /* a soft fade on the right edge hints that the row can scroll */
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 14px), transparent);
+    mask-image: linear-gradient(to right, black calc(100% - 14px), transparent);
   }
 
   .mobile-nav ul::-webkit-scrollbar {
@@ -42,23 +34,21 @@
   .mobile-nav-link {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-sm);
-    min-height: 40px;
-    padding: var(--space-sm) var(--space-md);
+    min-height: 32px;
+    padding: 4px 12px;
     white-space: nowrap;
     scroll-snap-align: start;
-    border: var(--border-thick) solid var(--pill-color);
+    border: 2px solid var(--pill-color);
     border-radius: var(--radius-pill);
     background: var(--surface);
     color: var(--text);
-    font-size: var(--font-size-md);
+    font-size: 0.85rem;
     text-decoration: none;
   }
 
+  /* text only on phones so all four fit; delete this rule to bring the icons back */
   .mobile-nav-link svg {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
+    display: none;
   }
 
   /* the page you're on is filled in */

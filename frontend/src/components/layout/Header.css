@@ -37,22 +37,54 @@
   transition: color var(--transition-slow);
 }
 
-/* phones: a much smaller header (the page switcher lives in MobileNav) */
+/* wraps the header + phone nav so they can stay together at the top */
+.site-top {
+  flex: none;
+}
+
+/* phones: a compact header that stays locked at the top with the page pills */
 @media (max-width: 768px) {
-  .navbar {
-    padding: var(--space-md) var(--space-12);
+  .site-top {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* the card above supplies the rounded corners */
+  .site-top .navbar {
+    border-radius: 0;
+    padding: var(--space-sm) var(--space-12);
   }
 
   .site-title {
-    font-size: clamp(1.35rem, 6.2vw, 1.8rem);
+    font-size: clamp(1.1rem, 5vw, 1.35rem);
     line-height: 1.15;
     letter-spacing: 0;
     text-wrap: balance;
   }
 
   .navbar .tagline {
-    margin: var(--space-xs) 0 0;
-    font-size: var(--font-size-sm);
+    margin: 2px 0 0;
+    font-size: 0.8rem;
     line-height: 1.3;
+  }
+
+  /* smaller social buttons */
+  .navbar .find-me {
+    margin-top: var(--space-xs);
+    gap: var(--space-sm);
+  }
+
+  .navbar .find-me .find-pill {
+    padding: 6px;
+  }
+
+  .navbar .find-me .find-pill svg {
+    width: 18px;
+    height: 18px;
   }
 }

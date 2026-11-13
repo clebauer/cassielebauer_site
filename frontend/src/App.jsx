@@ -28,8 +28,11 @@ const routes = [
 function App() {
   return (
     <>
-      <Header />
-      <MobileNav />
+      {/* header + phone page pills; on phones this whole block stays locked at the top */}
+      <div className="site-top">
+        <Header />
+        <MobileNav />
+      </div>
       <div className="app-layout">
         <Sidebar />
         <main className="app-main">
