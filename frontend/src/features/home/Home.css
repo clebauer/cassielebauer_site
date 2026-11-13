@@ -73,9 +73,12 @@
   .home-photo {
     position: static;
     float: right;
-    width: clamp(90px, 26vw, 140px);
-    height: auto;
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    object-position: center 20%; /* keeps your face in the crop */
     margin: 0 var(--space-10) var(--space-sm) var(--space-md);
+    border-radius: 0.75rem;
     rotate: 4deg;
   }
 }
