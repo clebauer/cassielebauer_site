@@ -13,7 +13,7 @@ export const resume = [
     entries: [
       {
         name: "centene",
-        role: "senior application development engineer (full stack web)",
+        role: "senior application development engineer (full-stack web dev)",
         dates: "nov 2023 - present",
         bullets: [
           "build and own internal web apps end-to-end in react, fastapi, and sql, from first idea through launch.",

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import data from "features/everything/data/everything.json";
 import Page from "components/ui/Page";
+import { SIDES, sideOf } from "features/everything/data/everything";
 import "./Admin.css";
 
 // Dev-only editor for everything.json. See the route note in App.
@@ -32,6 +33,7 @@ const blankDraft = () => ({
   endYear: "",
   ongoing: false,
   tags: [],
+  side: "personal",
   starred: false,
   hidden: false,
   reviewed: false,
@@ -47,6 +49,7 @@ const toDraft = (i) => ({
   endYear: i.endYear ?? "",
   ongoing: !!i.ongoing,
   tags: [...i.tags],
+  side: sideOf(i),
   starred: !!i.starred,
   hidden: !!i.hidden,
   reviewed: !!i.reviewed,
@@ -63,6 +66,7 @@ const fromDraft = (d) => {
   if (d.endYear !== "") item.endYear = Number(d.endYear);
   if (d.ongoing) item.ongoing = true;
   item.tags = d.tags;
+  item.side = d.side;
   item.starred = d.starred;
   if (d.hidden) item.hidden = true;
   if (d.reviewed) item.reviewed = true;
@@ -371,7 +375,7 @@ export default function EverythingAdmin() {
     reviewFilter === "all" || (reviewFilter === "done") === !!item.reviewed;
 
   // the groups shown on the left
-  const groups = tags
+  const byTag = tags
     .map((tag) => ({
       tag,
       rows: items
@@ -382,6 +386,16 @@ export default function EverythingAdmin() {
         ),
     }))
     .filter((g) => g.rows.length);
+
+  const bySide = SIDES.map((side) => ({
+    tag: side,
+    rows: items
+      .map((item, index) => ({ item, index }))
+      .filter(({ item }) => passesReview(item))
+      .filter(({ item }) => sideOf(item) === side.id),
+  })).filter((g) => g.rows.length);
+
+  const groups = grouping === "side" ? bySide : byTag;
 
   return (
     <Page title="edit everything">
@@ -396,6 +410,7 @@ export default function EverythingAdmin() {
           <select value={grouping} onChange={(e) => setGrouping(e.target.value)}>
             <option value="first">see by first</option>
             <option value="all">see by all</option>
+            <option value="side">see by tab</option>
           </select>
         </label>
 
@@ -459,7 +474,7 @@ export default function EverythingAdmin() {
                 </h2>
                 <ul id={`group-${tag.id}`} hidden={!isOpen}>
                   {rows.map(({ item, index }) => {
-                    const secondary = item.tags[0] !== tag.id;
+                    const secondary = grouping !== "side" && item.tags[0] !== tag.id;
                     return (
                       <li key={item.title}>
                         <button
@@ -616,6 +631,23 @@ export default function EverythingAdmin() {
                     </Chip>
                   </div>
                 </div>
+              </section>
+
+              <section className="admin-card">
+                <h3 className="admin-card-title">shows under</h3>
+                <div className="admin-chips" role="group" aria-label="Which tab">
+                  {SIDES.map((s) => (
+                    <Chip
+                      key={s.id}
+                      color={tagColor(s)}
+                      on={draft.side === s.id}
+                      onClick={() => set("side", s.id)}
+                    >
+                      {s.label}
+                    </Chip>
+                  ))}
+                </div>
+                <p className="admin-hint">it always shows under everything, too</p>
               </section>
 
               <section className="admin-card">

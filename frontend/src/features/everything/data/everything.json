@@ -3,72 +3,86 @@
     {
       "id": "tech",
       "label": "tech",
-      "color": 5
+      "color": 5,
+      "group": "topic"
     },
     {
       "id": "research",
       "label": "research",
-      "color": 2
+      "color": 2,
+      "group": "topic"
     },
     {
       "id": "creative",
       "label": "creative",
-      "color": 6
+      "color": 6,
+      "group": "topic"
     },
     {
       "id": "community",
       "label": "community",
-      "color": 3
+      "color": 3,
+      "group": "topic"
     },
     {
       "id": "leadership",
       "label": "leadership",
-      "color": 4
+      "color": 4,
+      "group": "topic"
     },
     {
       "id": "articles",
       "label": "articles",
-      "color": 5
+      "color": 5,
+      "group": "kind"
     },
     {
       "id": "awards",
       "label": "awards",
-      "color": 2
+      "color": 2,
+      "group": "kind"
     },
     {
       "id": "college",
       "label": "college",
-      "color": 6
+      "color": 6,
+      "group": "where"
     },
     {
       "id": "fun",
       "label": "for fun",
-      "color": 1
+      "color": 1,
+      "group": "topic"
     },
     {
       "id": "indeed",
       "label": "indeed",
-      "color": 5
+      "color": 5,
+      "group": "where"
     },
     {
       "id": "centene",
       "label": "centene",
-      "color": 5
+      "color": 5,
+      "group": "where"
     },
     {
       "id": "s-a",
       "label": "s&a",
-      "color": 5
+      "color": 5,
+      "group": "where"
     },
     {
       "id": "events",
       "label": "events",
-      "color": 3
+      "color": 3,
+      "group": "kind"
     },
     {
       "id": "other-jobs",
       "label": "other jobs!",
-      "color": 5
+      "color": 5,
+      "group": "where"
     }
   ],
   "items": [
@@ -81,6 +95,7 @@
         "articles",
         "indeed"
       ],
+      "side": "professional",
       "starred": false,
       "reviewed": true,
       "image": {
@@ -93,7 +108,7 @@
           "url": "https://www.tableau.com/events/tc/2022/indeed-accessible-dashboard-design-how-reduce-barriers-and-enable-interaction"
         },
         {
-          "label": "speaker announcement",
+          "label": "announcement",
           "url": "https://www.linkedin.com/posts/timberry2_tableau-conference-2022-speakers-sneak-peek-activity-6927660279853940736-veHp"
         }
       ]

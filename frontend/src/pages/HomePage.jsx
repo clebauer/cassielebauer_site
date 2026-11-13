@@ -24,8 +24,8 @@ export default function Home() {
           alt="Cassie smiling and glancing up and to the left, one hand behind her head, outdoors.
                She has half-pink half-purple hair, a septum ring and spider bites,
                and wears a hand-knit black shawl with rainbow stripes." />
-        <FactList title="professionally," facts={professional} />
-        <FactList title="personally," facts={personal} />
+        <FactList title="professionally," accent={5} facts={professional} />
+        <FactList title="personally," accent={3} facts={personal} />
 
 {/*         <div className="pill-row"> */}
 {/*           {goLinks.map((l, i) => ( */}

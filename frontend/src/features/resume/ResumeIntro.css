@@ -1,0 +1,63 @@
+/* two matching callouts at the top of the resume */
+.resume-intro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-12);
+  margin: 0;
+}
+
+.callout {
+  padding: var(--space-12) var(--space-15);
+  border: 1.5px solid var(--callout-border);
+  border-radius: var(--radius-lg);
+  background: var(--callout-bg);
+  color: var(--text-heading);
+  line-height: 1.45;
+}
+
+/* who am i: purple to pink, like the hair */
+.callout--who {
+  --callout-border: color-mix(in srgb, var(--color-6) 55%, white);
+  --callout-bg: linear-gradient(
+    110deg,
+    color-mix(in srgb, var(--color-6) 24%, white),
+    color-mix(in srgb, var(--color-5) 24%, white)
+  );
+}
+
+/* looking for: a highlighter yellow, a touch stronger so it reads as the ask */
+.callout--want {
+  --callout-border: color-mix(in srgb, var(--color-3) 80%, white);
+  --callout-bg: linear-gradient(
+    110deg,
+    color-mix(in srgb, var(--color-3) 45%, white),
+    color-mix(in srgb, var(--color-2) 25%, white)
+  );
+}
+
+.callout p {
+  margin: 0;
+}
+
+.callout .callout-label {
+  margin: 0 0 var(--space-sm);
+  font-weight: 700;
+}
+
+/* phones: stacked and a bit tighter */
+@media (max-width: 700px) {
+  .resume-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .callout {
+    padding: var(--space-sm) var(--space-12);
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+
+  .callout .callout-label {
+    margin-bottom: var(--space-xs);
+  }
+}

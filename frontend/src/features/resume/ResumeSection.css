@@ -7,6 +7,7 @@
   column-gap: var(--resume-gap);
   align-items: start;
   padding: var(--space-20) 0;
+  scroll-margin-top: var(--resume-scroll-offset, 60px); /* set by ResumeNav */
 }
 
 .resume-section:first-child {
@@ -37,6 +38,13 @@
   font-size: var(--font-size-md);
   font-weight: 700;
   color: var(--text-heading);
+}
+
+/* one-liner at the top of a section */
+.resume-section-blurb {
+  margin: 0 0 var(--space-12);
+  color: var(--gray-dark);
+  font-size: var(--font-size-sm);
 }
 
 /* one job or school */

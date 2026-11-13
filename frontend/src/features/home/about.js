@@ -1,6 +1,6 @@
 export const professional = [
   {
-    text: "i'm a senior full stack developer who loves working with react, fastapi, python, and sql of all kinds.",
+    text: "i'm a senior full-stack software engineer who loves working with react, fastapi, python, and sql of all kinds.",
     links: [{ label: "github", icon: "branch", href: "https://github.com/clebauer" }],
   },
   { text: "i have a master's degree in computer science and a bachelor's in mathematics.",

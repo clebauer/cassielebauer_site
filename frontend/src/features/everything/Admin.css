@@ -634,6 +634,38 @@
   gap: var(--space-sm);
 }
 
+.admin-topic-main {
+  display: flex;
+  gap: var(--space-xs);
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.admin-topic-main input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.admin-topic-main select {
+  flex: 0 0 auto;
+  font: inherit;
+  padding: 4px 8px;
+  border: var(--border-thin) solid var(--gray-mid);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text-heading);
+}
+
+.admin-chipgroup + .admin-chipgroup {
+  margin-top: var(--space-sm);
+}
+
+.admin-chipgroup-label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
 /* ============================================================
    small screens
    ============================================================ */

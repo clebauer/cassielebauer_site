@@ -28,11 +28,13 @@ function Entry({ name, role, dates, bullets }) {
   );
 }
 
-export default function ResumeSection({ title, items, entries }) {
+// id: what the section nav jumps to. blurb: an optional one-liner under the title.
+export default function ResumeSection({ id, title, blurb, items, entries }) {
   return (
-    <section className="resume-section">
+    <section className="resume-section" id={id}>
       <h2 className="resume-section-title">{title}</h2>
       <div>
+        {blurb && <p className="resume-section-blurb">{blurb}</p>}
         {entries
           ? entries.map((entry) => <Entry key={entry.name} {...entry} />)
           : <Bullets items={items} />}
