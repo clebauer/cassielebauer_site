@@ -1,9 +1,10 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Link, Routes, Route, useLocation } from 'react-router-dom'
 import { lazy, Suspense, useEffect, useRef } from "react";
 
 import Header from 'components/layout/Header'
 import MobileNav from 'components/layout/MobileNav'
 import Sidebar from 'components/layout/Sidebar'
+import Page from 'components/ui/Page'
 
 import Home from 'pages/HomePage'
 import Resume from 'pages/ResumePage'
@@ -38,6 +39,20 @@ function RouteFocus() {
 }
 
 function App() {
+  useEffect(() => {
+  const el = document.querySelector(".site-top");
+  const phone = window.matchMedia("(max-width: 768px)");
+  const set = () =>
+    document.documentElement.style.setProperty(
+      "--site-top-h", phone.matches && el ? `${el.offsetHeight + 8}px` : "0px"
+    );
+  set();
+  const ro = new ResizeObserver(set);
+  if (el) ro.observe(el);
+  phone.addEventListener("change", set);
+  return () => { ro.disconnect(); phone.removeEventListener("change", set); };
+}, []);
+
   return (
     <>
       <a href="#main" className="skip-link">skip to main content</a>
@@ -56,6 +71,7 @@ function App() {
               <Route key={path} path={path} element={component} />
             ))}
             <Route path="/miniapps/:slug" element={<MiniAppPage />} />
+            <Route path="*" element={<Page title="not found"><p>that page doesn't exist. <Link to="/">back home</Link></p></Page>} />
             {EverythingAdmin && (
               <Route
                 path="/admin/everything"

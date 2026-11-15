@@ -13,6 +13,8 @@ html, body {
   height: 100%;
   margin: 0;
   overflow-x: clip;
+  scroll-padding-top: var(--resume-scroll-offset, var(--site-top-h, 0px));
+
 }
 
 body {
@@ -69,9 +71,6 @@ body {
   }
 }
 
-html {
-  scroll-padding-top: var(--resume-scroll-offset, 0px);
-}
 
 @media (min-width: 769px) {
   html { overflow: hidden; }
