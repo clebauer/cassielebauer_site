@@ -20,7 +20,7 @@
   /* Text */
   --text: #222222;
   --text-heading: #333333;
-  --text-muted: #777777;
+  --text-muted: #595959;
 
   /* Semantic / UI state */
   --link-hover: var(--gray-mid);

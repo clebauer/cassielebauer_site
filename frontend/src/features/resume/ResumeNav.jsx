@@ -76,6 +76,8 @@ export default function ResumeNav({ sections }) {
     if (!el) return;
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     el.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" });
+    el.setAttribute("tabindex", "-1");
+    el.focus({ preventScroll: true });
   };
 
   return (

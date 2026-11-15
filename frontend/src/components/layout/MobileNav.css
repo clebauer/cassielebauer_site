@@ -57,8 +57,4 @@
     font-weight: 600;
   }
 
-  .mobile-nav-link:focus-visible {
-    outline: 3px solid var(--highlight-border);
-    outline-offset: 2px;
-  }
 }

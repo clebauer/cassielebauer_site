@@ -98,3 +98,7 @@
     margin-bottom: var(--space-12);
   }
 }
+
+.resume-section:focus {
+  outline: none;
+}

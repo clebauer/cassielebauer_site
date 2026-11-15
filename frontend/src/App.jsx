@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
-import { lazy, Suspense } from "react";
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { lazy, Suspense, useEffect, useRef } from "react";
 
 import Header from 'components/layout/Header'
 import MobileNav from 'components/layout/MobileNav'
@@ -25,9 +25,24 @@ const routes = [
   { path: '/miniapps', component: <MiniApps />, name: 'MiniApps' },
 ]
 
+// moves focus to the page heading on route change and sets the tab title
+function RouteFocus() {
+  const { pathname } = useLocation();
+  const first = useRef(true);
+  useEffect(() => {
+    const h1 = document.querySelector("main h1");
+    if (first.current) { first.current = false; return; }
+    if (h1) { h1.setAttribute("tabindex", "-1"); h1.focus({ preventScroll: true }); }
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   return (
     <>
+      <a href="#main" className="skip-link">skip to main content</a>
+      <RouteFocus />
+
       {/* header + phone page pills; on phones this whole block stays locked at the top */}
       <div className="site-top">
         <Header />
@@ -35,7 +50,7 @@ function App() {
       </div>
       <div className="app-layout">
         <Sidebar />
-        <main className="app-main">
+        <main className="app-main" id="main">
           <Routes>
             {routes.map(({ path, component }) => (
               <Route key={path} path={path} element={component} />

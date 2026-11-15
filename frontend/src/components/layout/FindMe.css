@@ -27,10 +27,6 @@
   transform: translateY(-1px);
 }
 
-.find-pill:focus-visible {
-  outline: 3px solid var(--highlight-border);
-  outline-offset: 2px;
-}
 
 .find-pill svg {
   width: 20px;

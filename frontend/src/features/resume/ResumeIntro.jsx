@@ -7,7 +7,7 @@ const CALLOUTS = [
     label: "who am i",
     tone: "who",
     squiggle: 6,
-    text: "a full-stack software engineer who uses react, python/fastapi, and sql to built tools/web apps with accessibility built in from the start.",
+    text: "a full-stack software engineer who uses react, python/fastapi, and sql to build tools/web apps with accessibility built in from the start.",
   },
   {
     label: "looking for",

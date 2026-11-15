@@ -71,3 +71,7 @@
     mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
   }
 }
+
+.resume-nav a[aria-current="location"] {
+x  font-weight: 700;
+}

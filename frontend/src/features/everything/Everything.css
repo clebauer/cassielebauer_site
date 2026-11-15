@@ -40,8 +40,13 @@
   font-weight: 700;
 }
 
+.chip[aria-pressed="true"],
+.tag[aria-pressed="true"] {
+    border-color: var(--text);
+}
+
 .chip:focus-visible {
-  outline: 3px solid var(--highlight-border);
+  outline: 3px solid var(--text);
   outline-offset: 2px;
 }
 
@@ -105,6 +110,7 @@
 .entry p {
   margin: 2px 0 0;
   font-size: var(--font-size-sm);
+  white-space: pre-line;
 }
 
 .links {
@@ -141,21 +147,15 @@
   color: var(--text-heading);
 }
 
-.tab[aria-selected="true"] {
-  color: var(--text-heading);
-  text-decoration: underline wavy var(--tab-color, var(--color-6)) 3px;
-  text-underline-offset: 9px;
-}
-
 .tab.squiggle-title {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--text-heading);
 }
 
 .tab:focus-visible {
-  outline: 3px solid var(--highlight-border);
+  outline: 3px solid var(--text);
   outline-offset: 4px;
   border-radius: var(--radius-lg);
 }
@@ -185,7 +185,7 @@
   font: inherit;
   font-size: var(--font-size-sm);
   padding: 2px var(--space-sm);
-  border: var(--border-thin) solid var(--gray-mid);
+  border: var(--border-thin) solid var(--gray-dark);
   border-radius: var(--radius-pill);
   background-color: transparent;
   color: var(--text);
@@ -198,13 +198,14 @@
 }
 
 .filter-select select:focus-visible {
-  outline: 3px solid var(--highlight-border);
+  outline: 3px solid var(--text);
   outline-offset: 2px;
 }
 
 .chip--small {
   font-size: 13px;
   padding: 0 var(--space-sm);
+  min-height: 24px;
 }
 
 /* ---------- the small tags on each entry (click one to filter) ---------- */
@@ -219,6 +220,7 @@
   font: inherit;
   font-size: 12px;
   line-height: 1.5;
+  min-height: 24px;
   padding: 0 10px;
   border: var(--border-thin) solid var(--tag-color);
   border-radius: var(--radius-pill);
@@ -237,7 +239,7 @@
 }
 
 .tag:focus-visible {
-  outline: 3px solid var(--highlight-border);
+  outline: 3px solid var(--text);
   outline-offset: 2px;
 }
 
@@ -302,7 +304,7 @@
 }
 
 .group-toggle:focus-visible {
-  outline: 3px solid var(--highlight-border);
+  outline: 3px solid var(--text);
   outline-offset: 2px;
 }
 

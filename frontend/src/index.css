@@ -32,3 +32,47 @@ body {
   grid-template-rows: auto minmax(0, 1fr);
   gap: var(--space-15);
 }
+
+/* visible keyboard focus everywhere */
+:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* skip link: hidden until focused */
+.skip-link {
+  position: absolute;
+  left: var(--space-md);
+  top: -100px;
+  z-index: 100;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--text);
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus {
+  top: var(--space-sm);
+}
+
+/* keep acronyms readable despite the global lowercase */
+.keep-case {
+  text-transform: none;
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-padding-top: var(--resume-scroll-offset, 0px);
+}
+
+@media (min-width: 769px) {
+  html { overflow: hidden; }
+}

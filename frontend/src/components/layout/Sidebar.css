@@ -21,6 +21,7 @@
   gap: var(--space-sm);
   white-space: nowrap;
   padding: var(--space-10) var(--space-12);
+  min-height: 44px;
   border-radius: var(--radius-md);
   color: var(--text);
   text-decoration: none;
@@ -43,6 +44,8 @@
 
 .sidebar-link.active {
   font-weight: 600;
+  background-color: color-mix(in srgb, var(--text) 8%, transparent);
+  box-shadow: inset 2px 0 0 var(--text);
 }
 
 /* hover colors in rainbow order */

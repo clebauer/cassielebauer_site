@@ -7,7 +7,7 @@ import "./Sidebar.css";
 export default function Sidebar() {
   return (
     <div id="site-menu" className="sidebar panel">
-      <NavLink to="/" end className="col-title brand">
+      <NavLink to="/" end className="col-title brand" aria-label="home">
         <Icon name="home" />
         cassie /
       </NavLink>
