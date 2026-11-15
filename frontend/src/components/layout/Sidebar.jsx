@@ -7,9 +7,12 @@ import "./Sidebar.css";
 export default function Sidebar() {
   return (
     <div id="site-menu" className="sidebar panel">
-      <NavLink to="/" end className="col-title brand" aria-label="home">
+      <NavLink to="/" end className="col-title brand">
         <Icon name="home" />
-        cassie /
+        <span>
+          cassie<span aria-hidden="true"> /</span>
+          <span className="visually-hidden"> home</span>
+        </span>
       </NavLink>
 
       <nav className="sidebar-nav" aria-label="main">
